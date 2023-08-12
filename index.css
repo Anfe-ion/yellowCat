@@ -101,14 +101,13 @@ header{
     gap: 0.5em;
 }
 .search-button{
-    height: 2.1em;
+    height: 3.15em;
     width: 20%;
     padding: 0.5em;
-    font-size: 1.35em;
     background-color: #FBF71E;
     border: none;
     border-radius: 7px;
-    border: 1px solid rgba(0, 0, 0, 0.20);
+    border: 1px solid #FBF71E;
 }
 
 .search-bar{
@@ -197,10 +196,27 @@ h1 a{
     color: #127FFF;
     text-decoration: underline;
 }
+
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1em;
+    position: absolute;
+    left: 25%;
+    bottom: 0;
+    margin-bottom: 5em;
+}
+
+.social-media button{
+    background-color: inherit;
+    border: none;
+    font-size: 1.5em;
+}
 /*header end*/
 
 /*Adjustement for mobile*/ 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 800px) {
     .nav{
         width: 50%;
     }
@@ -226,6 +242,17 @@ h1 a{
         flex-direction:column-reverse;   
         font-size: 0.8em;
         gap: 1em;
+    }
+
+    .social-media{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1em;
+        right: 25%;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 5em;
     }
 }
 /*End adjustement for mobile*/ 

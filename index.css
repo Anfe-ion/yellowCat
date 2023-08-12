@@ -1,0 +1,233 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*Reset end*/
+
+/*---Body---*/
+body{
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;    
+    /*horizontally center*/
+    margin: 0 auto;    
+}
+
+a{
+    color: #127FFF;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+button{
+    cursor: pointer;
+}
+
+/*header*/
+header{
+    display: flex;
+    padding: 1.2em;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    padding: 1.5em;    
+    background-color: white;
+    color:black;
+    font-size: 1.23em;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.288);
+}
+/*Search box*/
+.search-box{
+    display: flex;
+    gap: 0.5em;
+}
+.search-button{
+    height: 2.1em;
+    width: 20%;
+    padding: 0.5em;
+    font-size: 1.35em;
+    background-color: #FBF71E;
+    border: none;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.search-bar{
+    height: 2em;
+    width: 65%;
+    padding: 0.5em;
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+/*Search box end*/
+
+.nav-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    cursor: pointer;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-list a:hover{
+    text-decoration: underline;
+    text-decoration-color: #FBF71E;
+    text-decoration-thickness: 3px;
+}
+
+/*Propiety for JS*/ 
+.nav.visible{
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-menu{
+    margin-left: -0.5em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+    color: #127FFF;
+    background-color: inherit;
+    border: none;
+}
+
+.close-menu:hover{
+    color: #FBF71E;
+}
+
+h1 a{
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: black;
+    text-decoration: none;
+}
+
+.buttons{
+    display: flex;
+    gap: 2em;
+}
+
+.search, .shop-car, .login, .open-menu{
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    background-color: inherit;
+    border: none;
+}
+
+.search:hover, .shop-car:hover, .login:hover, .open-menu:hover{
+    color:#127FFF;
+}
+
+.login-section{
+    display: flex;
+    flex-direction: row;    
+    font-size: 0.8em;
+    gap: 1.5em;
+}
+
+.login-section a{
+    color: #127FFF;    
+}
+
+.login-section a:hover{
+    color: #127FFF;
+    text-decoration: underline;
+}
+/*header end*/
+
+/*Adjustement for mobile*/ 
+@media screen and (max-width: 550px) {
+    .nav{
+        width: 50%;
+    }
+
+    h1 a{
+        font-size: 2em;
+    }
+
+    .buttons{
+        gap: 1em;
+    }
+
+    .login{
+        display: none;
+    }
+    
+    .search, .shop-car, .login, .open-menu{
+        font-size: 1.5em;
+    }
+
+    .login-section{
+        display: flex;
+        flex-direction:column-reverse;   
+        font-size: 0.8em;
+        gap: 1em;
+    }
+}
+/*End adjustement for mobile*/ 
+
+/*---Body end---*/

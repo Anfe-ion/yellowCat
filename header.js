@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </li>
                 <li><a href="#">Todas las e-bikes</a></li>
                 <li><a href="#">Accesorios</a></li>
-                <li><a href="#">¿Por qué elegir una e-bike?</a></li>
+                <li><a href="./why-ebike.html">¿Por qué elegir una e-bike?</a></li>
                 <li><a href="#">Historias</a></li>
                 <li><a href="#">Quienes somos</a></li>
                 <li><a href="#">Soporte</a></li>

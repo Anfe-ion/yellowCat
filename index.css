@@ -56,7 +56,8 @@ body{
     font-size: 12px;
     font-family: 'Poppins', sans-serif;    
     /*horizontally center*/
-    margin: 0 auto;    
+    margin: 0 auto; 
+    background-color: #F8F8F8;   
 }
 
 a{
@@ -79,10 +80,11 @@ header{
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
+    background-color: white;
 }
 
 .nav{
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -218,6 +220,8 @@ h1 a{
 /*header end*/
 
 /*Content*/
+
+/*Banner*/
 .banner{
     width: 100%;
     position: relative;
@@ -260,7 +264,46 @@ h1 a{
 .banner button:active{
     transform: translateY(1px);
 }
+/*End Banner*/
 
+/*Products*/
+
+h3{
+    font-size: 3em;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.products{
+    padding: 2em;
+    display: flex;
+    gap: 1em;
+}
+
+.products div{
+    justify-content: space-between;
+}
+
+.products img{
+    width: 100%;
+    border-radius: 25px;
+    transition: filter 0.5s, width 0.8s;
+}
+
+.products div img:hover{
+    filter: blur(1px);
+    width: 101%;
+}
+
+.products div p:first-of-type, p:last-of-type{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+}
+/*End products*/
+
+/*End Content*/
 /*Adjustement for mobile*/ 
 @media screen and (max-width: 800px) {
     .nav{
@@ -307,6 +350,14 @@ h1 a{
     }
     .banner img{
         height: 100%;
+        width: 100%;
+    }
+
+    .products{
+        display: block;
+    }
+
+    .products img{
         width: 100%;
     }
 }

@@ -47,6 +47,13 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+img{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
 /*Reset end*/
 
 /*---Body---*/
@@ -73,156 +80,11 @@ button{
     cursor: pointer;
 }
 
-/*header*/
-header{
-    display: flex;
-    padding: 1.2em;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
-    background-color: white;
-}
-
-.nav{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 25%;
-    padding: 1.5em;    
-    background-color: white;
-    color:black;
-    font-size: 1.23em;
-    opacity: 0;
-    visibility: hidden;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.288);
-    z-index: 1;
-}
-
-/*Search box*/
-.search-box{
-    display: flex;
-    gap: 0.5em;
-}
-.search-button{
-    height: 3.15em;
-    width: 20%;
-    padding: 0.5em;
-    background-color: #FBF71E;
-    border: none;
-    border-radius: 7px;
-    border: 1px solid #FBF71E;
-}
-
-.search-bar{
-    height: 2em;
-    width: 65%;
-    padding: 0.5em;
-    border-radius: 7px;
-    border: 1px solid rgba(0, 0, 0, 0.20);
-}
-
-/*Search box end*/
-
-.nav-list{
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    cursor: pointer;
-}
-
-.nav-list a{
-    text-decoration: none;
-    color: inherit;
-}
-
-.nav-list a:hover{
-    text-decoration: underline;
-    text-decoration-color: #FBF71E;
-    text-decoration-thickness: 3px;
-}
-
-/*Propiety for JS*/ 
-.nav.visible{
-    opacity: 1;
-    visibility: visible;
-}
-
-.close-menu{
-    margin-left: -0.5em;
-    margin-bottom: 0.5em;
-    font-size: 2em;
-    color: #127FFF;
-    background-color: inherit;
-    border: none;
-}
-
-.close-menu:hover{
-    color: #FBF71E;
-}
-
-h1 a{
-    font-family: 'Pacifico', cursive;
-    font-size: 3em;
-    color: black;
-    text-decoration: none;
-}
-
-.buttons{
-    display: flex;
-    gap: 2em;
-}
-
-.search, .shop-car, .login, .open-menu{
-    font-size: 2em;
-    color: black;
-    font-weight: bold;
-    background-color: inherit;
-    border: none;
-}
-
-.search:hover, .shop-car:hover, .login:hover, .open-menu:hover{
-    color:#127FFF;
-}
-
-.login-section{
-    display: flex;
-    flex-direction: row;    
-    font-size: 0.8em;
-    gap: 1.5em;
-}
-
-.login-section a{
-    color: #127FFF;    
-}
-
-.login-section a:hover{
-    color: #127FFF;
-    text-decoration: underline;
-}
-
-.social-media{
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 1em;
-    position: absolute;
-    left: 28%;
-    bottom: 0;
-    margin-bottom: 5em;
-}
-
-.social-media button{
-    background-color: inherit;
-    border: none;
-    font-size: 1.5em;
-}
-/*header end*/
 
 /*Content*/
 
 /*Banner*/
-.banner{
+.banner, .calculator{
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -233,35 +95,37 @@ h1 a{
     top: 30%;
     left: 10%;
     gap: 1em;
+    font-size: 2em;
 }
 
-.banner img{
+.banner img, .calculator img{
     width: 100%;
     height: auto;    
     object-fit: cover;
 }
 
-.banner h2{
-    font-size: 2.5em;
+.banner h2, .calculator h4{
+    font-size: 60px;
     font-weight: bold;
     color: white;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
-.banner button{
+.banner button, .calculator button{
     background-color: #FBF71E;
-    font-size: 2.5em;
+    font-size: 36px;
     font-weight: bold;
+    letter-spacing: -2.5px;
     border: none;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
     border-radius: 20px;
     padding: 0.5em;
 }
 
-.banner button:hover{
+.banner button:hover, .calculator button:hover{
     transform: translateY(-1px);
 }
-.banner button:active{
+.banner button:active, .calculator button:active{
     transform: translateY(1px);
 }
 /*End Banner*/
@@ -272,6 +136,7 @@ h3{
     font-size: 3em;
     font-weight: bold;
     margin-left: 24px;
+    margin-top: 12px;
 }
 
 .products{
@@ -282,6 +147,7 @@ h3{
 
 .products div{
     justify-content: space-between;
+    margin-bottom: 2em;
 }
 
 .products img{
@@ -295,7 +161,7 @@ h3{
     width: 101%;
 }
 
-.products div p:first-of-type, p:last-of-type{
+.products div p:first-of-type, .products p:last-of-type{
     font-size: 2em;
     font-weight: bold;
     margin-top: 0.5em;
@@ -303,54 +169,32 @@ h3{
 }
 /*End products*/
 
+/*Banner calculator*/
+.calc-text{
+    position: absolute;
+    text-align: right;
+    top: 40%;
+    right: 5%;
+    gap: 1em;
+}
+/*End Banner Calculator*/
 /*End Content*/
+
+
 /*Adjustement for mobile*/ 
 @media screen and (max-width: 800px) {
-    .nav{
-        width: 50%;
-    }
-
-    h1 a{
-        font-size: 2em;
-    }
-
-    .buttons{
-        gap: 1em;
-    }
-
-    .login{
-        display: none;
-    }
-    
-    .search, .shop-car, .login, .open-menu{
-        font-size: 1.5em;
-    }
-
-    .login-section{
-        display: flex;
-        flex-direction:column-reverse;   
-        font-size: 0.8em;
-        gap: 1em;
-    }
-
-    .social-media{
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        gap: 1em;
-        right: 25%;
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 5em;
-    }
-
-    .banner{
+    .banner, .calculator{
         height: 600px;
         width: 100%;
     }
-    .banner img{
+
+    .banner img, .calculator img{
         height: 100%;
         width: 100%;
+    }
+
+    .banner h2, .calculator h4, .banner button, .calculator button{
+        font-size: 24px;
     }
 
     .products{
@@ -359,6 +203,11 @@ h3{
 
     .products img{
         width: 100%;
+    }
+
+    .calc-text{
+        top: 40%;
+        right: 5%;
     }
 }
 /*End adjustement for mobile*/ 

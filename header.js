@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><a href="#">Quienes somos</a></li>
                 <li><a href="#">Soporte</a></li>
                 <div class="login-section">
-                    <li><a href="#">Entrar</a></li>
-                    <li><a href="#">Registrarse</a></li>
+                    <li><a href="./login.html">Entrar</a></li>
+                    <li><a href="./register.html">Registrarse</a></li>
                     <li><a href="#">¿Olvidaste tu contraseña?</a></li>
                 </div>
                 <div class="social-media">
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="buttons">
             <button class="search" id="search"><i class="bi bi-search"></i></button>
             <button class="shop-car"><i class="bi bi-cart"></i></button>
-            <button class="login"><i class="bi bi-person"></i></button>
+            <button class="login"><a href="./login.html"><i class="bi bi-person"></i></a></button>
         </div>
     `
     document.body.insertBefore(header, document.body.firstChild);

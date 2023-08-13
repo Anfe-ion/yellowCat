@@ -11,6 +11,9 @@ footer{
 footer h6{   
     color: white; 
     padding: 0.5em;    
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    text-decoration: none;
 }
 
 footer a{

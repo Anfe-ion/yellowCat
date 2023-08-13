@@ -1,0 +1,101 @@
+body{
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;    
+    /*horizontally center*/
+    margin: 0 auto; 
+    background-color: #F8F8F8;   
+    bottom: 0;
+}
+
+section{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+section div:first-child{
+    width: 30%;
+    margin-left: 20em;
+}
+
+section div:nth-child(2){
+    width: 55%;
+    margin-left: 20em;
+}
+
+section p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+section div a{
+    font-size: 0.9em;
+}
+
+section input{
+    width: 55%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 2em;
+    padding: 0.5em;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+section button{
+    background-color: #FBF71E;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    border: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    border-radius: 4px;
+    padding: 0.5em;
+    margin-top: 1em;
+}
+
+section button:hover{
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+section button:active{
+    transform: translateY(1px);
+}
+
+/*Adjustement for mobile*/ 
+@media screen and (max-width: 800px) {
+    section{
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+    }
+
+    section div:first-child{
+        width: 90%;
+        margin-left: 2em;
+        margin-bottom: 2em;
+    }
+    
+    section div:nth-child(2){
+        width: 90%;
+        margin-left: 2em;
+    }
+
+    section input{
+        width: 90%;
+        height: 3em;
+    }
+
+    section button{
+        height: 3em;
+        width: 50%;
+    }
+}

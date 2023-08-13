@@ -23,3 +23,33 @@ section div:nth-child(2){
     width: 30%;
     margin-left: 0em;
 }
+
+@media screen and (max-width: 800px) {
+    section{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 1.5em;
+    }
+
+    section div:first-child{
+        width: 90%;
+        margin-left: 2em;
+        margin-bottom: 2em;
+    }
+    
+    section img{
+        display: none;
+    }
+
+    section input{
+        width: 90%;
+        height: 3em;
+    }
+
+    section button{
+        height: 3em;
+        width: 50%;
+        margin-bottom: 1em;
+    }
+}

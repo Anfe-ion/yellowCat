@@ -1,4 +1,8 @@
-section input{
+section{
+    display: flex;
+}
+
+section input, form label{
     width: 60%;
 }
 
@@ -28,7 +32,7 @@ section div:nth-child(2){
     section{
         display: flex;
         flex-direction: column;
-        height: auto;
+        height: 75vh;
         margin-top: 1.5em;
     }
 

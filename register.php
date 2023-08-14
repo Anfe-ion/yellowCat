@@ -1,9 +1,22 @@
+<!--Se usara un poco de php para relacionar con los demás archivos-->
+<?php require("register.class.php") ?>
+<!--Ahora para verificar si se dio clic en el botón-->
+<?php
+	if(isset($_POST['submit'])){
+		/*
+        Si es cierto, se creara un nuevo objeto nuevo de usuarioregistrado.
+        Luego se pasará el usuario y contraseña ingresados.
+        */
+		$user = new RegisterUser($_POST['username'], $_POST['password']);
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝐘𝐞𝐥𝐥𝐨𝐰 𝐂𝐚𝐭 | Bicicletas eléctricas</title>
+    <title>Registro | 𝐘𝐞𝐥𝐥𝐨𝐰 𝐂𝐚𝐭</title>
     <!--Icon-->
     <link rel="icon" href="./img/gato.png" type="image/x-icon">
     <!--Poppins-->
@@ -17,19 +30,19 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--Link CSS-->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./assets/index.css">
     <!--Login Styles-->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./assets/login.css">
     <!--Register Styles-->
-    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="./assets/register.css">
     <!--Header styles-->
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="./assets/header.css">
     <!--Footer styles-->
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./assets/footer.css">
     <!--Header-->
-    <script src="./header.js"></script>  
+    <script src="./assets/header.js"></script>  
     <!--Footer-->
-    <script src="./foooter.js"></script>  
+    <script src="./assets/footer.js"></script>  
     
 </head>
 
@@ -37,44 +50,32 @@
 
     <section>
         <div>
-            <h2>Registrate</h2>
-            <p>Si ya tienes una cuenta, por favor ve a la <a href="./login.html">página de ingreso.</a></p>
-            <ul>
-                <li>
-                    <p>Nombre(s)</p>
-                    <input type="text" placeholder="Escribe tus nombres">
-                </li>
-                <li>
-                    <p>Apellido(s)</p>
-                    <input type="text" placeholder="Escribe tus apellidos">
-                </li>
-                <li>
-                    <p>Fecha de nacimiento</p>
-                    <input type="date">
-                </li>
-                <li>
-                    <p>Cédula</p>
-                    <input type="number" placeholder="Escribe tu cédula">
-                </li>
-                <li>
-                    <p>Correo eléctronico</p>
-                    <input type="text" placeholder="ejemplo@mail.com">
-                </li>
-                <li>
-                    <p>Contraseña</p>
-                    <input type="password" placeholder="Escribe tu contraseña">
-                </li>
-                <li>
-                    <button>Registro</button>
-                </li>
-            </ul>
+            <!--Se crea el form-->
+            <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+                <h2>Registrate</h2>
+                <p>Si ya tienes una cuenta, por favor ve a la <a href="./login.php">página de ingreso.</a></p>
+                <!--Se crean los campos-->
+                <label>Usuario</label><br><br>
+                <input type="text" name="username"><br><br>
+
+                <label>Contraseña</label><br>
+                <input type="password" name="password"><br>
+                <!--Boton registro-->
+                <button type="submit" name="submit">Registrame</button>
+
+                <!--P's para enviar los mensajes-->
+                <!--Se añaden las propiedades-->
+                <p class="error"><?php echo @$user->error ?></p>
+                <p class="success"><?php echo @$user->success ?></p>
+            </form>
         </div>
+        
         <div>
             <a href="#"><img src="./img/promo.webp" alt="Promoción de e-bikes"></a>
         </div>
     </section>
     
     <!--Script hamburguer menu-->
-    <script src="./menu.js"></script>
+    <script src="./assets/menu.js"></script>
 </body>
 </html>

@@ -1,9 +1,20 @@
+<?php 
+//Para capturar la data
+require("login.class.php") 
+?>
+<?php 
+	//Para revisar la data y crear un nuevo objeto login	
+	if(isset($_POST['submit'])){
+		$user = new LoginUser($_POST['username'], $_POST['password']);
+	}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝐘𝐞𝐥𝐥𝐨𝐰 𝐂𝐚𝐭 | Bicicletas eléctricas</title>
+    <title>Iniciar sesión | 𝐘𝐞𝐥𝐥𝐨𝐰 𝐂𝐚𝐭</title>
     <!--Icon-->
     <link rel="icon" href="./img/gato.png" type="image/x-icon">
     <!--Poppins-->
@@ -17,17 +28,17 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--Link CSS-->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./assets/index.css">
     <!--Login Styles-->
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./assets/login.css">
     <!--Header styles-->
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="./assets/header.css">
     <!--Footer styles-->
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="./assets/footer.css">
     <!--Header-->
-    <script src="./header.js"></script>  
+    <script src="./assets/header.js"></script>  
     <!--Footer-->
-    <script src="./foooter.js"></script>  
+    <script src="./assets/footer.js"></script>  
     
 </head>
 
@@ -43,19 +54,28 @@
         </div>
 
         <div>
-            <h2>Cliente Registrado</h2>
-            <p>Email:</p>
-            <input type="text" placeholder="ejemplo@mail.com">
-            <p>Contraseña</p>
-            <input type="password" placeholder="Escribe aquí su contraseña">
-            <br><br><a href="#">¿Olvidaste tu contraseña?</a><br>
-            <button>Entrar</button>
+        <form action="" method="post" enctype="multipart/form-data" autocomplete="off">
+            <h2>Cliente Registrado</h2><br>
+
+            <label>Usuario</label><br><br>
+            <input type="text" name="username"><br><br>
+
+            <label>Contraseña</label><br>
+            <input type="password" name="password"><br>
+
+            <button type="submit" name="submit">Entrar</button>
+
+            <p class="error"><?php echo @$user->error ?></p>
+            <p class="success"><?php echo @$user->success ?></p>
+	    </form>
         </div>
+
+        
     </section>
     
     <!--Script hamburguer menu-->
-    <script src="./menu.js"></script>
+    <script src="./assets/menu.js"></script>
     <!--Script Login-->
-    <script src="./login.js"></script>
+    <script src="./assets/login.js"></script>
 </body>
 </html>

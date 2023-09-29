@@ -29,6 +29,7 @@ header{
     display: flex;
     gap: 0.5em;
 }
+
 .search-button{
     height: 3.15em;
     width: 20%;

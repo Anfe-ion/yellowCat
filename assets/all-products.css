@@ -1,0 +1,45 @@
+h2{
+    font-size: 5em;
+    font-weight: 600;
+}
+
+.container{
+    padding: 2em;
+}
+
+.col-sm-3{
+    padding: 1em;
+}
+
+.card{
+    border-radius: 15px;
+    border-radius: 1px solid rgba(0, 0, 0, 0.05) ;
+}
+
+.card-img-top{
+    padding: 1em;
+}
+
+h5, .card p:nth-child(3){
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.card p:nth-child(3){
+    margin-top: 0.6em;
+    margin-bottom: 1em;
+}
+
+.btn{
+    background-color: #FBF71E;
+    color: black;
+    border: none;
+    font-size: 1.2em;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.btn:active {
+    transform: scale(0.9) rotate(10deg);
+    background-color: red;
+  }

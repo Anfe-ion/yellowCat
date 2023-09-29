@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <input type="text" id="searchBar" class="search-bar" placeholder="Busca tu e-bike...">
                     <button id="search-button" class="search-button"><i class="bi bi-search"></i></button>                    
                 </li>
-                <li><a href="#">Todas las e-bikes</a></li>
+                <li><a href="../all-products.php">Todas las e-bikes</a></li>
                 <li><a href="#">Accesorios</a></li>
                 <li><a href="./why-ebike.html">¿Por qué elegir una e-bike?</a></li>
                 <li><a href="#">Historias</a></li>

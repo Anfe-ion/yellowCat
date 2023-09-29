@@ -14,6 +14,11 @@ footer h6{
     font-family: 'Pacifico', cursive;
     font-size: 3em;
     text-decoration: none;
+    cursor: pointer;
+}
+
+footer h6:hover{
+    text-decoration: underline;
 }
 
 footer a{
